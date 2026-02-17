@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        char route = sc.next().charAt(0);
+
+        int time = sc.nextInt();
+
+        int fare = 0;
+
+        boolean isMorning = time < 12;
+
+        switch (route) {
+            case 'A':
+                fare = isMorning ? 25 : 30;
+                break;
+            case 'B':
+                fare = isMorning ? 20 : 25;
+                break;
+            case 'C':
+                fare = isMorning ? 15 : 20;
+                break;
+        }
+
+        System.out.println(fare);
+
+        sc.close();
+    }
+}
